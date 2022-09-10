@@ -1,4 +1,3 @@
-#!/bin/ban
  #include <stdio.h>
 /**
  *  * main - main block

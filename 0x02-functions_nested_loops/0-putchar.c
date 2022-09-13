@@ -1,14 +1,24 @@
-# include <stdio.h>
-# include <stdlib.h>
+# include "stdio.h"
+#include "main.h"
 
 /**
- * main - print the word _putchar
+ * main - prints the word _putchar
  *
- * Return: 0 on sucess execution.
+ * Return: 0 on success execution.
  */
 
 int main(void)
 {
-	printf(" _puchar \n");
+	char s[] = "_putchar";
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		_putchar(s[i]);
+		i++;
+	}
+	_putchar(10);
+
 	return (0);
+
 }

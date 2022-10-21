@@ -1,51 +1,18 @@
-; File: 101-hello_holberton.asm
-; Auth: Onesimus Aiwanfo
+; file : 1010-hello_holberton.asm
 ; Desc: 64-bit assembly program that prints
-;       Hello, Holberton followed by a new line.
+;       Hello, Horberton followed by a new line.
+SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-extern printf
-
-section .text
-   global main
-
+	SECTION .text
+	extern printf
+	global main
 main:
-   push rbp
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
+	call printf
 
-   mov rdi,fmt
-   mov rsi,msg
-   mov rax,0
-   call printf
-
-   pop rbp
-
-   mov rax,0
-   ret
-
-section .data
-   msg: db "Hello, Holberton", 0
-   fmt: db "%s", 10, 0; File: 101-hello_holberton.asm
-; Auth: Gedeon Obae Gekonge
-; Desc: 64-bit assembly program that prints
-;       Hello, Holberton followed by a new line.
-
-extern printf
-
-section .text
-   global main
-
-main:
-   push rbp
-
-   mov rdi,fmt
-   mov rsi,msg
-   mov rax,0
-   call printf
-
-   pop rbp
-
-   mov rax,0
-   ret
-
-section .data
-   msg: db "Hello, Holberton", 0
-   fmt: db "%s", 10, 0
+	mov eax, 0
+	ret

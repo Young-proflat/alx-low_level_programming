@@ -1,5 +1,5 @@
-#ifndef search_algos.h
-#define search_algos.h
+#ifndef search_algos_h
+#define search_algos_h
 
 
 #include <stdlib.h>
